@@ -1,2 +1,8 @@
 #include "lib/heapsort.cpp"
-template<typename T> void heapSort(T* arr, long N);
+#include "lib/quicksort.cpp"
+#include "lib/mergesort.cpp"
+#include "lib/cxxsort.cpp"
+template <typename T> void heapSort(T* arr, long N);
+template <typename T> void quickSort(T* arr,long size);
+template <typename T> void mergeSort(T* arr,long size);
+template <typename T> void cxxsort(T *arr,long size);

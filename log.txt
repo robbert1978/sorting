@@ -1,0 +1,43 @@
+Test[ 1] Execute: 351913
+Test[ 2] Execute: 335715
+Test[ 3] Execute: 472992
+Test[ 4] Execute: 465085
+Test[ 5] Execute: 454704
+Test[ 6] Execute: 463700
+Test[ 7] Execute: 473330
+Test[ 8] Execute: 456071
+Test[ 9] Execute: 454994
+Test[10] Execute: 453345
+Merge sort: 
+Test[ 1] Execute: 188805
+Test[ 2] Execute: 187746
+Test[ 3] Execute: 222446
+Test[ 4] Execute: 219015
+Test[ 5] Execute: 218714
+Test[ 6] Execute: 220397
+Test[ 7] Execute: 216845
+Test[ 8] Execute: 250964
+Test[ 9] Execute: 216374
+Test[10] Execute: 217820
+Quick sort: 
+Test[ 1] Execute: 30246423
+Test[ 2] Execute: 30167829
+Test[ 3] Execute: 30411367
+Test[ 4] Execute: 30512129
+Test[ 5] Execute: 30596406
+Test[ 6] Execute: 31134372
+Test[ 7] Execute: 30458070
+Test[ 8] Execute: 30465625
+Test[ 9] Execute: 30721167
+Test[10] Execute: 30411444
+C++ sort: 
+Test[ 1] Execute: 163757
+Test[ 2] Execute: 154753
+Test[ 3] Execute: 274781
+Test[ 4] Execute: 276059
+Test[ 5] Execute: 278232
+Test[ 6] Execute: 276970
+Test[ 7] Execute: 274110
+Test[ 8] Execute: 272919
+Test[ 9] Execute: 275540
+Test[10] Execute: 275087

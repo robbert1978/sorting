@@ -1,5 +1,4 @@
 #include <iostream>
-#include <fstream>
 #include <chrono>
 #include "include/sort_alog.h"
 #define MAX_SIZE 1000000
@@ -13,8 +12,9 @@ template <typename T> void run_test_case(unsigned int num,T func){
               fscanf(f,"%lf\n",arr_+i);
        }
        func(arr_,MAX_SIZE);
+       free(arr_);
 }
-template <typename T> void test_alog(T func){
+template <typename T> void test_algo(T func){
        for(unsigned int i=1;i<=10;i++){
               auto start = std::chrono::high_resolution_clock::now();
               run_test_case(i,func);
@@ -25,5 +25,11 @@ template <typename T> void test_alog(T func){
 }
 int main(){
        puts("Heap sort: ");
-       test_alog(heapSort<double>);
+       test_algo(heapSort<double>);
+       puts("Merge sort: ");
+       test_algo(mergeSort<double>);
+       puts("Quick sort: ");
+       test_algo(quickSort<double>);
+       puts("C++ sort: ");
+       test_algo(cxxsort<double>);
 }
