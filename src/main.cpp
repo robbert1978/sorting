@@ -15,6 +15,7 @@ template <typename T> void run_test(unsigned int num,T func){
        func(arr_,MAX_SIZE);
 }
 int main(){
+       puts("Heap sort: ");
        for(unsigned int i=1;i<=10;i++){
               auto start = std::chrono::high_resolution_clock::now();
               run_test(i,heapSort<double>);
