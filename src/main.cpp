@@ -5,7 +5,7 @@
 #define MAX_SIZE 1000000
 char path_test_file[100];
 double *arr_;
-template <typename T> void run_test(unsigned int num,T func){
+template <typename T> void run_test_case(unsigned int num,T func){
        sprintf(path_test_file,"./test_case/%u_test.txt",num);
        FILE *f=fopen(path_test_file,"r");
        arr_=new double[MAX_SIZE];
@@ -14,13 +14,16 @@ template <typename T> void run_test(unsigned int num,T func){
        }
        func(arr_,MAX_SIZE);
 }
-int main(){
-       puts("Heap sort: ");
+template <typename T> void test_alog(T func){
        for(unsigned int i=1;i<=10;i++){
               auto start = std::chrono::high_resolution_clock::now();
-              run_test(i,heapSort<double>);
+              run_test_case(i,func);
               auto stop =  std::chrono::high_resolution_clock::now();
               auto duration =std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
               printf("Test[%2u] Execute: %ld\n",i,duration.count());
        }
+}
+int main(){
+       puts("Heap sort: ");
+       test_alog(heapSort<double>);
 }
