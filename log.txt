@@ -1,43 +1,12 @@
-Test[ 1] Execute: 351913
-Test[ 2] Execute: 335715
-Test[ 3] Execute: 472992
-Test[ 4] Execute: 465085
-Test[ 5] Execute: 454704
-Test[ 6] Execute: 463700
-Test[ 7] Execute: 473330
-Test[ 8] Execute: 456071
-Test[ 9] Execute: 454994
-Test[10] Execute: 453345
-Merge sort: 
-Test[ 1] Execute: 188805
-Test[ 2] Execute: 187746
-Test[ 3] Execute: 222446
-Test[ 4] Execute: 219015
-Test[ 5] Execute: 218714
-Test[ 6] Execute: 220397
-Test[ 7] Execute: 216845
-Test[ 8] Execute: 250964
-Test[ 9] Execute: 216374
-Test[10] Execute: 217820
-Quick sort: 
-Test[ 1] Execute: 30246423
-Test[ 2] Execute: 30167829
-Test[ 3] Execute: 30411367
-Test[ 4] Execute: 30512129
-Test[ 5] Execute: 30596406
-Test[ 6] Execute: 31134372
-Test[ 7] Execute: 30458070
-Test[ 8] Execute: 30465625
-Test[ 9] Execute: 30721167
-Test[10] Execute: 30411444
-C++ sort: 
-Test[ 1] Execute: 163757
-Test[ 2] Execute: 154753
-Test[ 3] Execute: 274781
-Test[ 4] Execute: 276059
-Test[ 5] Execute: 278232
-Test[ 6] Execute: 276970
-Test[ 7] Execute: 274110
-Test[ 8] Execute: 272919
-Test[ 9] Execute: 275540
-Test[10] Execute: 275087
+./bin/main
+|      Test	|	 Heap Sort	|	Quick Sort	|	Merge Sort	|	  C++ Sort	|
+|         1	|	    382671	|	    220525	|	    220525	|	    187154	|
+|         2	|	    388433	|	    235097	|	    235097	|	    173429	|
+|         3	|	    530029	|	    252117	|	    252117	|	    340838	|
+|         4	|	    549337	|	    252032	|	    252032	|	    297928	|
+|         5	|	    505975	|	    248722	|	    248722	|	    294919	|
+|         6	|	    501668	|	    251510	|	    251510	|	    303873	|
+|         7	|	    540638	|	    263504	|	    263504	|	    327497	|
+|         8	|	    535396	|	    241031	|	    241031	|	    294034	|
+|         9	|	    518888	|	    255902	|	    255902	|	    315302	|
+|        10	|	    517254	|	    248939	|	    248939	|	    318679	|

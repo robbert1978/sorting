@@ -5,4 +5,4 @@
 template <typename T> void heapSort(T* arr, long N);
 template <typename T> void quickSort(T* arr,long size);
 template <typename T> void mergeSort(T* arr,long size);
-template <typename T> void cxxsort(T *arr,long size);
+template <typename T> void cxxSort(T *arr,long size);
