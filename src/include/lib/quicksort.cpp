@@ -1,33 +1,56 @@
 #include <iostream>
-template <typename T> long partition (T* arr, long low, long high)
+template <typename T> long partition(T* arr,long start,long end)
 {
-    long pivot = arr[rand() % (high-low)+low];    // pivot
-    long left = low;
-    long right = high - 1;
-    while(true){
-        while(left <= right && arr[left] < pivot) left++;
-        while(right >= left && arr[right] > pivot) right--;
-        if (left >= right) break;
-        std::swap(arr[left], arr[right]);
-        left++;
-        right--;
-    }
-    std::swap(arr[left], arr[high]);
-    return left;
-}
-template <typename T> void quicksort(T* arr, long low, long high)
-{
-    if (low < high)
-    {
-        /* pi là chỉ số nơi phần tử này đã đứng đúng vị trí
-         và là phần tử chia mảng làm 2 mảng con trái & phải */
-        long pi = partition<T>(arr, low, high);
  
-        // Gọi đệ quy sắp xếp 2 mảng con trái và phải
-        quicksort<T>(arr, low, pi - 1);
-        quicksort<T>(arr, pi + 1, high);
+   T pivot = arr[rand()%(end-start) + start];
+ 
+   long count = 0;
+    for (long i = start + 1; i <= end; i++) {
+        if (arr[i] <= pivot)
+            count++;
     }
+ 
+    // Giving pivot element its correct position
+   long pivotIndex = start + count;
+    std::swap(arr[pivotIndex], arr[start]);
+ 
+    // Sorting left and right parts of the pivot element
+   long i = start, j = end;
+ 
+    while (i < pivotIndex && j > pivotIndex) {
+ 
+        while (arr[i] <= pivot) {
+            i++;
+        }
+ 
+        while (arr[j] > pivot) {
+            j--;
+        }
+ 
+        if (i < pivotIndex && j > pivotIndex) {
+            std::swap(arr[i++], arr[j--]);
+        }
+    }
+ 
+    return pivotIndex;
+}
+ 
+template <typename T> void quicksort(T* arr,long start,long end)
+{
+ 
+    // base case
+    if (start >= end)
+        return;
+ 
+    // partitioning the array
+   long p = partition(arr, start, end);
+ 
+    // Sorting the left part
+    quicksort(arr, start, p - 1);
+ 
+    // Sorting the right part
+    quicksort(arr, p + 1, end);
 }
 template <typename T> void quickSort(T* arr,long size){
-    quicksort<T>(arr,0,size-1);
+    quicksort(arr,0,size-1);
 }
