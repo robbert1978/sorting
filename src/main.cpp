@@ -40,7 +40,7 @@ int main(){
               mergeSort_time=meansure_time(num_test,mergeSort<double>);
               cxxSort_time  =meansure_time(num_test,cxxSort<double>);
               printf("|%10u\t|\t%10ld\t|\t%10ld\t|\t%10ld\t|\t%10ld\t|\n",
-                     num_test,heapSort_time,quickSort_time,mergeSort_time,cxxSort_time
+                     num_test,heapSort_time.count(),quickSort_time.count(),mergeSort_time.count(),cxxSort_time.count()
               );
        }
 }
