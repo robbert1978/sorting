@@ -1,5 +1,5 @@
 generate_test:
-	cd test_case ; python3 generator.py ; cd ..`
+	cd test_case ; python generator.py ; cd ..
 build:
 	g++ -std=c++20 src/main.cpp -o bin/main
 debug:
