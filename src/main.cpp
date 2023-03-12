@@ -9,6 +9,8 @@ template <typename T> std::chrono::microseconds meansure_time(unsigned int num_t
 _init_arr:
        sprintf(path_test_file,"./test_case/%u_test.txt",num_test);
        test_file=fopen(path_test_file,"r");
+       if (test_file==NULL)
+              return (std::chrono::microseconds)0;
        arr_=new double[MAX_SIZE];
        for(size_t i=0;i<MAX_SIZE;i++){
               fscanf(test_file,"%lf\n",arr_+i);
