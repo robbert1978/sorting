@@ -55,6 +55,8 @@ template <typename T> void merge(T *arr, long l, long m, long r)
         j++; 
         k++; 
     } 
+    free(L);
+    free(R);
 } 
   
 // l is for left index and r is  
