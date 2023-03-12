@@ -4,7 +4,7 @@ template <typename T> void merge(T *arr, long l, long m, long r)
     long n2 = r - m; 
   
     // Create temp arrays  
-    T L[n1], R[n2]; 
+    T *L=new T[n1], *R=new T[n2]; 
   
     // Copy data to temp arrays L[] and R[]  
     for(long i = 0; i < n1; i++) 
