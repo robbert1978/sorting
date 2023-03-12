@@ -5,12 +5,13 @@
 char path_test_file[100];
 double *arr_;
 FILE *test_file;
-template <typename T> std::chrono::microseconds meansure_time(unsigned int num_test,T func){
+template <typename T> std::chrono::microseconds 
+meansure_time(unsigned int num_test,T func){
 _init_arr:
        sprintf(path_test_file,"./test_case/%u_test.txt",num_test);
        test_file=fopen(path_test_file,"r");
        if (test_file==NULL)
-              return (std::chrono::microseconds)0;
+              return (std::chrono::microseconds)-1;
        arr_=new double[MAX_SIZE];
        for(size_t i=0;i<MAX_SIZE;i++){
               fscanf(test_file,"%lf\n",arr_+i);
@@ -38,7 +39,7 @@ int main(){
               quickSort_time=meansure_time(num_test,quickSort<double>);
               mergeSort_time=meansure_time(num_test,mergeSort<double>);
               cxxSort_time  =meansure_time(num_test,cxxSort<double>);
-              printf("|%10u\t|\t%10lu\t|\t%10lu\t|\t%10lu\t|\t%10lu\t|\n",
+              printf("|%10u\t|\t%10ld\t|\t%10ld\t|\t%10ld\t|\t%10ld\t|\n",
                      num_test,heapSort_time,quickSort_time,mergeSort_time,cxxSort_time
               );
        }
