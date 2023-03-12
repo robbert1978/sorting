@@ -1,8 +1,8 @@
 generate_test:
-	cd test_case ; python3 generator.py ; cd ..
+	cd test_case ; python3 generator.py ; cd ..`
 build:
-	g++ src/main.cpp -o bin/main
+	g++ -std=c++20 src/main.cpp -o bin/main
 debug:
-	g++ -g src/main.cpp -o bin/main
+	g++ -std=c++20 -g src/main.cpp -o bin/main
 run:
 	./bin/main
